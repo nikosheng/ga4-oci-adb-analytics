@@ -49,7 +49,8 @@ def main(date, credential, bucket, namespace):
 
     # Write to OCI Object Storage in Parquet format
     destination = "oci://{0}@{1}/bigquery/dataset/parquet/{2}".format(bucket, namespace, date)
-    df.write.format("parquet").mode("overwrite").save(destination)
+    # Write to a single parquet file to reduce the output number
+    df.coalesce(1).write.format("parquet").mode("overwrite").save(destination)
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="PySpark Job - Google Analytics 4 to OCI")
