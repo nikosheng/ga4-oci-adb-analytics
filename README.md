@@ -41,10 +41,14 @@
 
 4. ## Create the OCI Dataflow Application
 
-    OCI Dataflow is a Spark runtime that allows you to execute your Spark applications in Java, Scala, Python, or SQL. Additionally, the job will terminate all running resources once it is finished, making it cost-effective. We will use a pyspark job to leverage the [Spark BigQuery Connector](https://github.com/GoogleCloudDataproc/spark-bigquery-connector) to retrieve the data in BigQuery.
+    OCI Dataflow is a Spark runtime that allows you to execute your Spark applications in Java, Scala, Python, or SQL. Additionally, the job will terminate all running resources once it is finished, making it cost-effective. We will use a pyspark job to leverage the [Spark BigQuery Connector](https://github.com/GoogleCloudDataproc/spark-bigquery-connector) to retrieve the data in BigQuery. The pyspark program is ready in github project path `dataflow-spark-bq-connector`.
+
+    For more information to how to createa a pyspark application, please refer to [Creating a PySpark Data Flow Application](https://docs.oracle.com/en-us/iaas/data-flow/using/dfs_create_pyspark_data_flow_app.htm#create_pyspark_app)
 
 6. ## Schedule the automated job by OCI Resource Schedule
 
-7. ## Configure Data Feeding in OCI ADB Database Actions
+    If you want to schedule the OCI Dataflow job to run in a specific schedule, you can use OCI Resource Schedule, which is a serverless scheduler for you to trigger the OCI Functions. For more information, please refer to [Getting Started with Resource Scheduler](https://docs.oracle.com/en-us/iaas/Content/resource-scheduler/tasks/getting-started_resource_scheduler.htm).
 
-8. ## Configure Scheduling in OCI ADB Database ACtions
+8. ## Configure Data Feeding in OCI ADB Database Actions
+
+9. ## Configure Scheduling in OCI ADB Database ACtions
